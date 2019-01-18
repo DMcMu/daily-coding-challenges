@@ -5,11 +5,11 @@
 def solution(a, k):
     if a == None or len(a) == 0 or k == None:
         return False
-    dictio = {}
+    seto = set()
     for item in a:
         compl = k - item
-        dictio[item] = compl
-        if compl in dictio:
+        seto.add(item)
+        if compl in seto:
             return True
     
     return False

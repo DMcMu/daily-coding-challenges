@@ -4,13 +4,13 @@
 
 def solution(a, k):
     if a == None or len(a) == 0 or k == None:
-        return False
-    seto = set()
-    for item in a:
-        compl = k - item
-        seto.add(item)
-        if compl in seto:
+        return False #Checking for bad entries
+    seenNumbers = set()
+    for number in a:
+        compliment = k - number
+        if compliment in seenNumbers:
             return True
+        seenNumbers.add(number) #Add number to set
     
     return False
 
